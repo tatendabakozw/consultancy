@@ -1,25 +1,31 @@
+const { join } = require('path');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    join(
+      __dirname,
+      '{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
+    ),
   ],
   theme: {
     extend: {
       colors: {
         primary: {
-          original: "#131921",
-          dark: "#71061f",
-          light: "#be526b",
-          superdark: "#410312",
-          superlight: "#da9cab",
+          original: "#274C77",
+          dark: "#1b3553",
+          light: "#6882a0",
+          superdark: "#101e30",
+          superlight: "#a9b7c9",
         },
         secondary: {
-          original: "#ff9935",
-          dark: "#b36b25",
-          light: "#ffb872",
-          superdark: "#06162a",
-          superlight: "#ffd6ae",
+          original: "#B8BC89",
+          dark: "#818460",
+          light: "#cdd0ac",
+          superdark: "#4a4b37",
+          superlight: "#e3e4d0",
         },
       },
     },
